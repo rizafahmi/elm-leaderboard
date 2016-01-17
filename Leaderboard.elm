@@ -1,7 +1,23 @@
 module Leaderboard where
 
-import Html
+import Html exposing (..)
 import Html.Attributes exposing (class)
 
 main =
-  Html.button [ class "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" ] [ Html.text "Button" ]
+  div [class "ui container"] [
+    h1 [] [text "LeaderBoard"],
+    div [class "ui buttons"] [
+      button [class "ui button"] [text "Sort By Score"],
+      button [class "ui button"] [text "Sort By Name"]
+    ],
+    div [class "ui buttons"] [
+      button [class "ui labeled button orange icon"] [
+        i [class "random icon"] [],
+        text "Randomize"
+      ],
+      button [class "ui labeled button red icon"] [
+        i [class "refresh icon"] [],
+        text "Reset"
+      ]
+    ]
+  ]

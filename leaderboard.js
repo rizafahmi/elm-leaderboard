@@ -10235,8 +10235,20 @@ Elm.Leaderboard.make = function (_elm) {
    $Result = Elm.Result.make(_elm),
    $Signal = Elm.Signal.make(_elm);
    var _op = {};
-   var main = A2($Html.button,
-   _U.list([$Html$Attributes.$class("mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent")]),
-   _U.list([$Html.text("Button")]));
+   var main = A2($Html.div,
+   _U.list([$Html$Attributes.$class("ui container")]),
+   _U.list([A2($Html.h1,_U.list([]),_U.list([$Html.text("LeaderBoard")]))
+           ,A2($Html.div,
+           _U.list([$Html$Attributes.$class("ui buttons")]),
+           _U.list([A2($Html.button,_U.list([$Html$Attributes.$class("ui button")]),_U.list([$Html.text("Sort By Score")]))
+                   ,A2($Html.button,_U.list([$Html$Attributes.$class("ui button")]),_U.list([$Html.text("Sort By Name")]))]))
+           ,A2($Html.div,
+           _U.list([$Html$Attributes.$class("ui buttons")]),
+           _U.list([A2($Html.button,
+                   _U.list([$Html$Attributes.$class("ui labeled button orange icon")]),
+                   _U.list([A2($Html.i,_U.list([$Html$Attributes.$class("random icon")]),_U.list([])),$Html.text("Randomize")]))
+                   ,A2($Html.button,
+                   _U.list([$Html$Attributes.$class("ui labeled button red icon")]),
+                   _U.list([A2($Html.i,_U.list([$Html$Attributes.$class("refresh icon")]),_U.list([])),$Html.text("Reset")]))]))]));
    return _elm.Leaderboard.values = {_op: _op,main: main};
 };
